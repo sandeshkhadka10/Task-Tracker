@@ -1,10 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
 
-/**
- * Header Component
- * Displays app title and add task button
- */
 export const Header = ({ onAddTask }) => {
   return (
     <div className="flex justify-between items-center mb-6">

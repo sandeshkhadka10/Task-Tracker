@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
 import { TaskAPI } from '../services/taskAPI';
 
-/**
- * Custom hook for managing tasks
- * Handles all CRUD operations for tasks
- */
 export const useTasks = () => {
   const [tasks, setTasks] = useState([]);
 
@@ -20,10 +16,6 @@ export const useTasks = () => {
     }
   }, [tasks]);
 
-  /**
-   * Add a new task
-   * @param {Object} taskData - Task data without ID
-   */
   const addTask = (taskData) => {
     const newTask = {
       ...taskData,
@@ -32,11 +24,6 @@ export const useTasks = () => {
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
-  /**
-   * Update an existing task
-   * @param {number} id - Task ID
-   * @param {Object} taskData - Updated task data
-   */
   const updateTask = (id, taskData) => {
     setTasks(prevTasks =>
       prevTasks.map(task =>
@@ -45,18 +32,11 @@ export const useTasks = () => {
     );
   };
 
-  /**
-   * Delete a task
-   * @param {number} id - Task ID to delete
-   */
   const deleteTask = (id) => {
     setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
   };
 
-  /**
-   * Toggle task status between pending and done
-   * @param {Object} task - Task object to toggle
-   */
+
   const toggleTaskStatus = (task) => {
     setTasks(prevTasks =>
       prevTasks.map(t =>

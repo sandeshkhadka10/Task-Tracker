@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 
-/**
- * Task Form Component
- * Modal form for adding and editing tasks
- */
 export const TaskForm = ({ task, onSave, onCancel }) => {
   const [formData, setFormData] = useState(
     task || { title: '', dueDate: '', status: 'pending' }

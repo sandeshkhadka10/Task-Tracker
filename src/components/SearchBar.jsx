@@ -1,10 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 
-/**
- * Search Bar Component
- * Input field for searching tasks by title
- */
 export const SearchBar = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="relative">

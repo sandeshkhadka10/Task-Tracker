@@ -1,9 +1,5 @@
 import React from 'react';
 
-/**
- * Sort Dropdown Component
- * Dropdown for selecting sort criteria
- */
 export const SortDropdown = ({ sortBy, setSortBy }) => {
   return (
     <select

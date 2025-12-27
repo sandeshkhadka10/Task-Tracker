@@ -1,9 +1,5 @@
 import React from 'react';
 
-/**
- * Filter Buttons Component
- * Buttons for filtering tasks by status
- */
 export const FilterButtons = ({ filter, setFilter }) => {
   const filters = [
     { value: 'all', label: 'All' },

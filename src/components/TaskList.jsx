@@ -1,10 +1,6 @@
 import React from 'react';
 import { TaskItem } from './TaskItem';
 
-/**
- * Task List Component
- * Displays list of tasks or empty state
- */
 export const TaskList = ({ tasks, onEdit, onDelete, onToggleStatus }) => {
   if (tasks.length === 0) {
     return (

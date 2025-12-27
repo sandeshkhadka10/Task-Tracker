@@ -1,8 +1,3 @@
-/**
- * Task API Service
- * Handles all data persistence operations using localStorage
- */
-
 const STORAGE_KEY = 'tasks';
 
 const defaultTasks = [
@@ -12,10 +7,6 @@ const defaultTasks = [
 ];
 
 export const TaskAPI = {
-  /**
-   * Get all tasks from localStorage
-   * @returns {Array} Array of task objects
-   */
   getTasks: () => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
@@ -26,10 +17,6 @@ export const TaskAPI = {
     }
   },
 
-  /**
-   * Save tasks to localStorage
-   * @param {Array} tasks - Array of task objects to save
-   */
   saveTasks: (tasks) => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));

@@ -1,10 +1,6 @@
 import React from 'react';
 import { Edit2, Trash2 } from 'lucide-react';
 
-/**
- * Task Item Component
- * Displays a single task with actions
- */
 export const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
   return (
     <div className="border rounded-lg p-4 mb-3 hover:shadow-md transition-shadow bg-white">

@@ -7,10 +7,6 @@ import { useTasks } from './hooks/useTasks';
 import { useDebounce } from './hooks/useDebounce';
 import { TaskUtils } from './utils/taskUtils';
 
-/**
- * Main App Component
- * Orchestrates all components and manages application state
- */
 function App() {
   const { tasks, addTask, updateTask, deleteTask, toggleTaskStatus } = useTasks();
   const [filter, setFilter] = useState('all');
@@ -21,9 +17,6 @@ function App() {
 
   const debouncedSearch = useDebounce(searchTerm, 300);
 
-  /**
-   * Process tasks through filtering, searching, and sorting
-   */
   const getProcessedTasks = useCallback(() => {
     let processed = tasks;
     processed = TaskUtils.filterTasks(processed, filter);
