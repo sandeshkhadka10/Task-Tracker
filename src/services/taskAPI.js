@@ -1,3 +1,4 @@
+// it is responsible to get and save tasks in localStorage
 const STORAGE_KEY = 'tasks';
 
 const defaultTasks = [

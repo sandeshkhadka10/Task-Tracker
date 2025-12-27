@@ -6,6 +6,7 @@ export const useTasks = () => {
 
   // Load tasks on mount
   useEffect(() => {
+    // TaskAPI.getTasks() -> retrives saved tasks
     setTasks(TaskAPI.getTasks());
   }, []);
 
