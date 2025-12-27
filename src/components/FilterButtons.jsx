@@ -2,6 +2,7 @@ import React from 'react';
 
 export const FilterButtons = ({ filter, setFilter }) => {
   const filters = [
+    // Filter value: 'all' and Button value: 'All'
     { value: 'all', label: 'All' },
     { value: 'pending', label: 'Pending' },
     { value: 'done', label: 'Done' }
