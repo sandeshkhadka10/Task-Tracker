@@ -1,10 +1,17 @@
+// useCallback -> memoizes a function so it isn't recreated unnecessarily
 import React, { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Filters } from './components/Filters';
 import { TaskList } from './components/TaskList';
 import { TaskForm } from './components/TaskForm';
+
+// useTasks -> manages task data and task actions
 import { useTasks } from './hooks/useTasks';
+
+// useDebounce -> delays updates which is used for search input
 import { useDebounce } from './hooks/useDebounce';
+
+// TaskUtils -> utility functions for filtering, searching and sorting tasks
 import { TaskUtils } from './utils/taskUtils';
 
 function App() {
@@ -15,6 +22,7 @@ function App() {
   const [showForm, setShowForm] = useState(false);
   const [editingTask, setEditingTask] = useState(null);
 
+  // delay the search updates by 300ms
   const debouncedSearch = useDebounce(searchTerm, 300);
 
   const getProcessedTasks = useCallback(() => {
